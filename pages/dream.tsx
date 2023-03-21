@@ -117,31 +117,30 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>RoomGPT</title>
+        <title>interioraty</title>
       </Head>
       <Header photo={session?.user?.image || undefined} />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
         <a
-          href="https://twitter.com/nutlope/status/1633529333565251595"
+          href="https://twitter.com/interioraty"
           target="_blank"
           rel="noreferrer"
           className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
         >
-          <span className="font-semibold">728,000 rooms</span> generated and
-          counting
+          <span className="font-semibold">728,000 개의 방들</span> 생성되고 있으며, 계속 증가 중입니다.
         </a>
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+           <span className="text-blue-600">꿈의</span> 방 생성하기
         </h1>
         {status === "authenticated" && data && !restoredImage && (
           <p className="text-gray-400">
-            You have{" "}
+            당신은{" "}
             <span className="font-semibold text-gray-300">
-              {data.remainingGenerations} generations
+              {data.remainingGenerations} 세대를 가지고 있습니다.
             </span>{" "}
-            left today. Your generations will renew in{" "}
+            오늘 남은 리모델링 기회는 남아있지 않습니다. 당신의 리모델링 기회는 다음에 갱신됩니다.{" "}
             <span className="font-semibold text-gray-300">
-              {hours} hours and {minutes} minutes.
+              {hours} 시간 후에 갱신됩니다 {minutes} 분입니다.
             </span>
           </p>
         )}
@@ -150,8 +149,8 @@ const Home: NextPage = () => {
             <motion.div className="flex justify-between items-center w-full flex-col mt-4">
               {restoredImage && (
                 <div>
-                  Here's your remodeled <b>{room.toLowerCase()}</b> in the{" "}
-                  <b>{theme.toLowerCase()}</b> theme!{" "}
+                  여기 당신의 리모델링된 <b>{room.toLowerCase()}</b> 다음의{" "}
+                  <b>{theme.toLowerCase()}</b> 테마입니다!{" "}
                 </div>
               )}
               <div
@@ -195,7 +194,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room theme.
+                      당신의 방 테마를 선택하세요.
                       </p>
                     </div>
                     <DropDown
@@ -214,7 +213,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Choose your room type.
+                      당신의 방 유형을 선택하세요.
                       </p>
                     </div>
                     <DropDown
@@ -233,7 +232,7 @@ const Home: NextPage = () => {
                         alt="1 icon"
                       />
                       <p className="text-left font-medium">
-                        Upload a picture of your room.
+                      당신의 방 사진을 업로드하세요.
                       </p>
                     </div>
                   </div>
@@ -243,9 +242,7 @@ const Home: NextPage = () => {
                 !originalPhoto && (
                   <div className="h-[250px] flex flex-col items-center space-y-6 max-w-[670px] -mt-8">
                     <div className="max-w-xl text-gray-300">
-                      Sign in below with Google to create a free account and
-                      redesign your room today. You will be able to do 3
-                      redesigns per day for free.
+                    Google 로 로그인하여 무료 계정을 생성하고 오늘 바로 방을 리모델링하세요. 하루에 3번의 리모델링이 무료로 가능합니다.
                     </div>
                     <button
                       onClick={() => signIn("google")}
@@ -257,7 +254,7 @@ const Home: NextPage = () => {
                         height={20}
                         alt="google's logo"
                       />
-                      <span>Sign in with Google</span>
+                      <span>Google 로 로그인하기</span>
                     </button>
                   </div>
                 )
@@ -274,7 +271,7 @@ const Home: NextPage = () => {
               {restoredImage && originalPhoto && !sideBySide && (
                 <div className="flex sm:space-x-4 sm:flex-row flex-col">
                   <div>
-                    <h2 className="mb-1 font-medium text-lg">Original Room</h2>
+                    <h2 className="mb-1 font-medium text-lg">원래 방</h2>
                     <Image
                       alt="original photo"
                       src={originalPhoto}
@@ -284,7 +281,7 @@ const Home: NextPage = () => {
                     />
                   </div>
                   <div className="sm:mt-0 mt-8">
-                    <h2 className="mb-1 font-medium text-lg">Generated Room</h2>
+                    <h2 className="mb-1 font-medium text-lg">생성된 방</h2>
                     <a href={restoredImage} target="_blank" rel="noreferrer">
                       <Image
                         alt="restored photo"
@@ -314,7 +311,7 @@ const Home: NextPage = () => {
                   role="alert"
                 >
                   <div className="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-                    Please try again later.
+                    나중에 다시 시도해주세요.
                   </div>
                   <div className="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
                     {error}
@@ -332,7 +329,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-blue-500 rounded-full text-white font-medium px-4 py-2 mt-8 hover:bg-blue-500/80 transition"
                   >
-                    Generate New Room
+                    새로운 방 생성하기
                   </button>
                 )}
                 {restoredLoaded && (
@@ -345,7 +342,7 @@ const Home: NextPage = () => {
                     }}
                     className="bg-white rounded-full text-black border font-medium px-4 py-2 mt-8 hover:bg-gray-100 transition"
                   >
-                    Download Generated Room
+                    생성된 방 다운로드하기
                   </button>
                 )}
               </div>

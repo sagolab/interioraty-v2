@@ -3,8 +3,8 @@ import Image from "next/image";
 const testimonials = [
   [
     {
-      content: "So good! I need this right now. Congrats on the launch!",
-      link: "https://twitter.com/eveporcello/status/1631438728999899136",
+      content: "정말 좋아요! 지금 필요한 것 같아요. 출시 축하드려요!",
+      link: "https://twitter.com/interioraty",
       author: {
         name: "Eve Porcello",
         role: "Engineer & Author",
@@ -14,8 +14,8 @@ const testimonials = [
 
     {
       content:
-        "Finally! Something to help me get over my indecisiveness when decorating my house!",
-      link: "https://twitter.com/arthur_dvorkin/status/1631402865209274369",
+        "드디어! 집 꾸미기에서 우유부단함을 극복하는 데 도움이 되는 것이 있네요!",
+      link: "https://twitter.com/interioraty",
       author: {
         name: "Arthur Dvorkin",
         role: "Engineer",
@@ -26,8 +26,8 @@ const testimonials = [
   [
     {
       content:
-        "This is incredible, you don't need an interior designer anymore.",
-      link: "https://www.tiktok.com/@thenubians/video/7206088336044313861?q=roomgpt.io&t=1677909079689",
+        "이것은 놀라운 것입니다. 이제는 인테리어 디자이너가 필요하지 않을 것 같네요.",
+      link: "https://twitter.com/interioraty",
       author: {
         name: "Ade Dada",
         role: "Startup Founder",
@@ -36,8 +36,8 @@ const testimonials = [
     },
     {
       content:
-        "I haven't changed my room layout for 5 years, but this app may change that. Great job.",
-      link: "https://twitter.com/RobAttfield/status/1631545265281974273",
+        "5년 동안 방 레이아웃을 변경하지 않았는데, 이 앱이 그것을 바꿀지도 모르겠네요. 멋진 일을 해내셨습니다.",
+      link: "https://twitter.com/interioraty",
       author: {
         name: "Rob Attfield",
         role: "Software Engineer",
@@ -48,8 +48,8 @@ const testimonials = [
   [
     {
       content:
-        "This is fantastic. I've already decided on a new wall color from a generated image and repainting it is now my weekend project.",
-      link: "https://twitter.com/Music4UsAll/status/1631622608595607552",
+        "이것은 환상적입니다. 이미 생성된 이미지에서 새로운 벽 색상을 결정했고, 그것을 다시 칠하는 것이 이제 주말 프로젝트가 되었습니다.",
+      link: "https://twitter.com/interioraty",
       author: {
         name: "Music",
         role: "Some dude on the internet",
@@ -58,7 +58,7 @@ const testimonials = [
     },
     {
       content: "🤯",
-      link: "https://twitter.com/github/status/1631821360619028482",
+      link: "https://twitter.com/interioraty",
       author: {
         name: "GitHub",
         role: "The one and only",
@@ -78,10 +78,10 @@ export function Testimonials() {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 md:px-7">
         <div className="mx-auto md:text-center">
           <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-gray-300 sm:text-6xl">
-            Loved by many worldwide.
+            전 세계 많은 사람들에게 사랑받고 있습니다.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
-            See what our 92,000+ users are saying about the product.
+            제품에 대해 92,000명 이상의 사용자가 말하는 것을 확인하세요.
           </p>
         </div>
         <ul
